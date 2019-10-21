@@ -13,12 +13,13 @@ connectDB()
 const app = express();
 
 //middleware
+//body parser
+app.use(express.json())
 
 //dev loggin middleware
 if (process.env.NODE_ENV == 'development') {
   app.use(morgan('dev'))
 }
-
 //routes
 const bootcamps = require('./routes/bootcamps')
 
