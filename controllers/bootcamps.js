@@ -151,7 +151,6 @@ exports.bootcampPhotoUpload = asyncHandler(async (req, res, next) => {
     );
   }
 
-
   if (!req.files) {
     return next(new ErrorResponse(`Please upload the file`, 400));
   }
